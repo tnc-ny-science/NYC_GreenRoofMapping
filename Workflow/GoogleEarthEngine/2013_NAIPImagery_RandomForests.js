@@ -90,12 +90,12 @@ var classifiedExport = classified.add(1) //Add 1 to all pixels so in output laye
 
 
 //export Classification
-Export.image(classifiedExport.uint8(), 'exportNDVI_Classification', {
-  scale: 1,
-  maxPixels: 10000000000,
-  region: geometry,
-  crs: "EPSG:2263"
-});
+// Export.image(classifiedExport.uint8(), 'exportNDVI_Classification', {
+  // scale: 1,
+  // maxPixels: 10000000000,
+  // region: geometry,
+  // crs: "EPSG:2263"
+// });
 
 
 // ///END OF CODE
