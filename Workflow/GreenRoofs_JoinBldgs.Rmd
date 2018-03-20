@@ -1,0 +1,87 @@
+---
+title: "GreenRoof Work"
+output: html_notebook
+---
+
+This code is set up to join data from building footprint data for NYC with the digitized green roof footprints. Run from a Ubuntu VirtualMachine.
+
+## Setting Things Up:
+
+```{r}
+library(sf)
+library(RPostgreSQL)
+
+# Example of loadingin Census Data
+#nyct <- sf::st_read("https://data.cityofnewyork.us/resource/i69b-3rdj.GeoJson", limit=288)
+
+# Load password from local file
+pw <- scan("~/.pgpass2", what="")
+
+#establish postgres connection
+conn = RPostgreSQL::dbConnect(PostgreSQL(), dbname='nycgis', user='postgres', host='mlt_host', password=pw)
+
+```
+
+## Perform query to do get bin and bbl from buildings to footprints; then join info from pluto based on bbl. 
+
+```{r}
+
+system.time(dbGetQuery(conn, 
+  "select distinct on (geom_2263) foo.geom_2263,
+	foo.id,
+	foo.bin_bldgs,
+	st_area(foo.geom_2263) as square_feet,
+	foo.bbl_bldgs,
+	mappluto_citywide_16v2.bbl::numeric(10,0)::text as bbl_pluto,
+	mappluto_citywide_16v2.address as address_pluto, 
+	mappluto_citywide_16v2.borough as boro_pluto 
+	into infrastructure.greenroofs_bbl_bin_20180220
+	from	
+	(select distinct on (geom_2263) st_multi(st_intersection(st_multi(greenroof_footprints.geom_2263),
+  nycbldgs_201708.geom_2263))::geometry(MultiPolygon, 2263) as geom_2263, --foo.*, as geom_2263, --foo.*, 
+	id,
+	nycbldgs_201708.bbl::text as bbl_bldgs, 
+	nycbldgs_201708.bin::text as bin_bldgs 
+	FROM test.greenroof_footprints --, admin.mappluto_citywide_16v2 
+		left join infrastructure.nycbldgs_201708 on st_intersects(greenroof_footprints.geom_2263,  nycbldgs_201708.geom_2263)
+				WHERE ST_Intersects(greenroof_footprints.geom_2263, nycbldgs_201708.geom_2263)) as foo
+				left join admin.mappluto_citywide_16v2 on bbl_bldgs = mappluto_citywide_16v2.bbl::numeric(10,0)::text;"))
+
+# Vacuum analyze				
+system.time(dbGetQuery(conn, 
+   "vacuum analyse infrastructure.greenroofs_bbl_bin_20180220;"))
+
+# Create Spatial Index
+system.time(dbGetQuery(conn, 
+    "CREATE INDEX greenroofs_bbl_bin_20180220_geom_idx
+    ON infrastructure.greenroofs_bbl_bin_20180220
+    USING GIST (geom_2263);"))
+
+# Create unique id & primary key	
+system.time(dbGetQuery(conn,     
+  "ALTER TABLE infrastructure.greenroofs_bbl_bin_20180220 ADD COLUMN uid SERIAL PRIMARY KEY;")
+)
+```
+
+## Write out the data
+
+```{r}
+# read data created by the query
+gr <- st_read_db(conn=conn, table=c("infrastructure","greenroofs_bbl_bin_20180220"))
+
+# With mapview package installed, can easily view the data interactively
+#mapview::mapview(gr)
+
+# Create output directory
+dir.create("../greenroof_gisdata/greenroofs_bbl_bin_20180220")
+
+# Check the crs
+print(st_crs(gr))
+
+# Write out the data as a shapefile
+st_write(gr, "../greenroofs_bbl_bin_20180220/greenroofs_bbl_bin_20180220.shp")
+
+# Write out the data as a geoJson
+st_write(st_transform(gr, 4326), "../greenroofs_bbl_bin_20180220.GeoJSON")#, delete_dsn = TRUE)
+
+```
