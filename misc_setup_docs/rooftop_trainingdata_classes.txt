@@ -1,0 +1,41 @@
+10 - Green Roofs
+11 - Green Roofs - Sedum
+12 - other green roof (unclear exactly what)
+
+
+20 - Other Roofs
+21 - Cool Roofs - White
+22 - brown/tan
+23 - red
+24 - grey 
+25 - green copper
+26 - green shingle or similar
+27 - black roof
+28 - blue roof
+
+30 - other veg
+31 - leaf off tree canopy
+32 - leaf on tree canopy
+33 - shrubs
+
+
+40 - strong shadow (strong shadow undefined)
+41 - grey roof shadow
+42 - green shingle shadow
+43 - white roof shadow
+44 - brown/tan shadow
+45 - green copper shadow
+46 - black roof shadow
+47 - green roof shadow
+
+
+50 - recreation
+51 - pool
+52 - green turf
+
+#NOT USED
+#40 - Sloped Roofs
+#41 - brown/tan
+#42 - red
+#43 - grey sloped
+
