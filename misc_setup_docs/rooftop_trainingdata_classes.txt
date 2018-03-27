@@ -17,6 +17,7 @@
 31 - leaf off tree canopy
 32 - leaf on tree canopy
 33 - shrubs
+34 - grass
 
 
 40 - strong shadow (strong shadow undefined)
@@ -27,11 +28,14 @@
 45 - green copper shadow
 46 - black roof shadow
 47 - green roof shadow
+48 - other veg shadow
 
 
 50 - recreation
 51 - pool
 52 - green turf
+53 - Green Court
+54 - Red Court/Track
 
 #NOT USED
 #40 - Sloped Roofs
