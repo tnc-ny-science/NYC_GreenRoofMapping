@@ -12,6 +12,8 @@
 26 - green shingle or similar
 27 - black roof
 28 - blue roof
+29 - skylight
+
 
 30 - other veg
 31 - leaf off tree canopy
@@ -29,6 +31,7 @@
 46 - black roof shadow
 47 - green roof shadow
 48 - other veg shadow
+49 - red shadow
 
 
 50 - recreation
