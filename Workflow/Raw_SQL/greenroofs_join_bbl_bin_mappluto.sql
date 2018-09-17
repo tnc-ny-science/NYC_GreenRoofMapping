@@ -10,7 +10,7 @@ group by id, qa_notes order by idcnt desc, id;
 -- still includes areas as 'probably planters and such.
 create
 	table
-		results_greenroof.greenroofs_qa_20180914_bin201708_mappluto18v1 as 
+		results_greenroof.greenroofs_qa_20180918_bin201708_mappluto18v1 as 
 		select
 			gr.id,
 			bd.bin,
@@ -24,8 +24,9 @@ create
 			bd.heightroof,
 			bd.feat_code,
 			bd.groundelev,
-			gr.qa_notes,
-			pluto.ownername,
+			gr.qa_notes as qa,
+			gr.notes,
+			--pluto.ownername,
 			pluto.ownertype,
 			pluto.zonedist1,
 			pluto.spdist1
@@ -33,7 +34,8 @@ create
 			results_greenroof.greenroofresults_qa_20180912 gr
 		join infrastructure.nycbldgs_201708 bd on
 				st_intersects( gr.geom_2263, bd.geom_2263 )
-		join admin.mappluto_citywide18v1 pluto on pluto.bbl::numeric=bd.bbl::numeric;
+		join admin.mappluto_citywide18v1 pluto on pluto.bbl::numeric=bd.bbl::numeric
+		where gr.qa_notes like 'Good%';
 
 			
 select bin, count(bin) as cnt from results_greenroof.greenroofs_qa_20180914_bin201708_bbl
