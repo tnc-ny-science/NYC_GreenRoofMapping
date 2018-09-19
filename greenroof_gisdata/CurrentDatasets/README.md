@@ -27,22 +27,22 @@ Mike Treglia, Urban Spatial Planner, The Nature Conservancy. michael.treglia[at]
 
 Some, but not all fields were joined to the green roof footprint data based on building footprint and tax lot data; those datasets are embedded as hyperlinks below.
 
-* fid - Unique identifier
-* *bin - NYC Building ID Number based on overlap between green roof areas and a building footprint dataset for NYC from August, 2017. (Newer building footprint datasets do not have linkages to the tax lot identifier (bbl), thus this older dataset was used). The most current building footprint dataset should be available at: [https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh). Associated metadata for fields from that dataset are available at [https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_BuildingFootprints.md](https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_BuildingFootprints.md).
-* *bbl - Boro Block and Lot number as a single string. This field is a tax lot identifier for NYC, which can be tied to the [Digital Tax Map](http://gis.nyc.gov/taxmap/map.htm) and (PLUTO/MapPLUTO)[https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page]. Metadata for fields pulled from PLUTO/MapPLUTO can be found in the [PLUTO Data Dictionary](https://www1.nyc.gov/assets/planning/download/pdf/data-maps/open-data/pluto_datadictionary.pdf?v=18v1). All joins to this bbl were based on MapPLUTO version 18v1.
-* *gr_area - Total area of the footprint of the green roof as per this data layer, in square feet, calculated using the projected coordinate system (EPSG 2263).
-* *bldg_area - Total area of the footprint of the associated building, in square feet, calculated using the projected coordinate system (EPSG 2263).
-* *prop_gr - Proportion of the building covered by green roof according to this layer (*gr_area*/*bldg_area*).
-* *cnstrct_yr - Year the building was constructed, pulled from the Building Footprint data.
-* *doitt_id - An identifier for the building assigned by the NYC Dept. of Information Technology and Telecommunications, pulled from the Building Footprint Data.
-* *heightroof - Height of the roof of the associated building, pulled from the Building Footprint Data.
-* *feat_code - Code describing the type of building, pulled from the Building Footprint Data.
-* *groundelev - Lowest elevation at the building level, pulled from the Building Footprint Data.
-* *qa - Flag indicating a positive QA/QC check (using multiple types of imagery); all data in this dataset should have 'Good'
-* *notes - Any notes about the green roof taken during visual inspection of imagery; for example, it was noted if the green roof appeared to be missing in newer imagery, or if there were parts of the roof for which it was unclear whether there was green roof area or potted plants.
-* *classified - Flag indicating whether the green roof was detected image classification. (1 for yes, 0 for no)
-* *digitized - Flag indicating whether the green roof was digitized prior to image classification and used as training data. (1 for yes, 0 for no)
-* *newlyadded - Flag indicating whether the green roof was detected solely by visual inspection after the image classification and added. (1 for yes, 0 for no)
+* fid* - Unique identifier
+* *bin* - NYC Building ID Number based on overlap between green roof areas and a building footprint dataset for NYC from August, 2017. (Newer building footprint datasets do not have linkages to the tax lot identifier (bbl), thus this older dataset was used). The most current building footprint dataset should be available at: [https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh). Associated metadata for fields from that dataset are available at [https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_BuildingFootprints.md](https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_BuildingFootprints.md).
+* *bbl* - Boro Block and Lot number as a single string. This field is a tax lot identifier for NYC, which can be tied to the [Digital Tax Map](http://gis.nyc.gov/taxmap/map.htm) and (PLUTO/MapPLUTO)[https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page]. Metadata for fields pulled from PLUTO/MapPLUTO can be found in the [PLUTO Data Dictionary](https://www1.nyc.gov/assets/planning/download/pdf/data-maps/open-data/pluto_datadictionary.pdf?v=18v1). All joins to this bbl were based on MapPLUTO version 18v1.
+* *gr_area* - Total area of the footprint of the green roof as per this data layer, in square feet, calculated using the projected coordinate system (EPSG 2263).
+* *bldg_area* - Total area of the footprint of the associated building, in square feet, calculated using the projected coordinate system (EPSG 2263).
+* *prop_gr* - Proportion of the building covered by green roof according to this layer (*gr_area*/*bldg_area*).
+* *cnstrct_yr* - Year the building was constructed, pulled from the Building Footprint data.
+* *doitt_id* - An identifier for the building assigned by the NYC Dept. of Information Technology and Telecommunications, pulled from the Building Footprint Data.
+* *heightroof* - Height of the roof of the associated building, pulled from the Building Footprint Data.
+* *feat_code* - Code describing the type of building, pulled from the Building Footprint Data.
+* *groundelev* - Lowest elevation at the building level, pulled from the Building Footprint Data.
+* *qa* - Flag indicating a positive QA/QC check (using multiple types of imagery); all data in this dataset should have 'Good'
+* *notes* - Any notes about the green roof taken during visual inspection of imagery; for example, it was noted if the green roof appeared to be missing in newer imagery, or if there were parts of the roof for which it was unclear whether there was green roof area or potted plants.
+* *classified* - Flag indicating whether the green roof was detected image classification. (1 for yes, 0 for no)
+* *digitized* - Flag indicating whether the green roof was digitized prior to image classification and used as training data. (1 for yes, 0 for no)
+* *newlyadded* - Flag indicating whether the green roof was detected solely by visual inspection after the image classification and added. (1 for yes, 0 for no)
 * *original_source* - Indication of what the original data source was, whether a specific website, agency such as NYC Dept. of Parks and Recreation (DPR), or NYC Dept. of Environmental Protection (DEP). Multiple sources are separated by a slash.
 * *address* - Address based on MapPLUTO, joined to the dataset based on *bbl*.
 * *borough* - Borough abbreviation pulled from MapPLUTO.
