@@ -28,7 +28,7 @@ Mike Treglia, Urban Spatial Planner, The Nature Conservancy. michael.treglia[at]
 
 Some, but not all fields were joined to the green roof footprint data based on building footprint and tax lot data; those datasets are embedded as hyperlinks below.
 
-* fid* - Unique identifier
+* *fid* - Unique identifier
 * *bin* - NYC Building ID Number based on overlap between green roof areas and a building footprint dataset for NYC from August, 2017. (Newer building footprint datasets do not have linkages to the tax lot identifier (bbl), thus this older dataset was used). The most current building footprint dataset should be available at: [https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh). Associated metadata for fields from that dataset are available at [https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_BuildingFootprints.md](https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_BuildingFootprints.md).
 * *bbl* - Boro Block and Lot number as a single string. This field is a tax lot identifier for NYC, which can be tied to the [Digital Tax Map](http://gis.nyc.gov/taxmap/map.htm) and (PLUTO/MapPLUTO)[https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page]. Metadata for fields pulled from PLUTO/MapPLUTO can be found in the [PLUTO Data Dictionary](https://www1.nyc.gov/assets/planning/download/pdf/data-maps/open-data/pluto_datadictionary.pdf?v=18v1). All joins to this bbl were based on MapPLUTO version 18v1.
 * *gr_area* - Total area of the footprint of the green roof as per this data layer, in square feet, calculated using the projected coordinate system (EPSG 2263).
