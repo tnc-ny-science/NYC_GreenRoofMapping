@@ -26,15 +26,21 @@ create
 			bd.groundelev,
 			gr.qa_notes as qa,
 			gr.notes,
+			gr.classified,
+			gr.digitized,
+			gr.newlyadded,
+			gr.gr_source as original_source,
 			--pluto.ownername,
+			pluto.address,
+			pluto.borough,
 			pluto.ownertype,
 			pluto.zonedist1,
 			pluto.spdist1
 		from
 			results_greenroof.greenroofresults_qa_20180912 gr
-		join infrastructure.nycbldgs_201708 bd on
+		left join infrastructure.nycbldgs_201708 bd on
 				st_intersects( gr.geom_2263, bd.geom_2263 )
-		join admin.mappluto_citywide18v1 pluto on pluto.bbl::numeric=bd.bbl::numeric
+		left join admin.mappluto_citywide18v1 pluto on pluto.bbl::numeric=bd.bbl::numeric
 		where gr.qa_notes like 'Good%';
 
 			
