@@ -2,7 +2,7 @@
 
 The files in this folder are GIS data files representing green roof footprints in NYC, based on aggregated data from multiple sources, classification of aerial imagery, and manual correction/edits. Thus, these data represent what was present and detected in aerial imagery for NYC from 2016, described at [https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_AerialImagery.md](https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_AerialImagery.md). 
 
-This dataset was developed by The Nature Conservancy's New York City Program (Mike Treglia and Emily Maxwell) with contributions (data aggregation and additional support) from Timon McPhearson of The Urban Systems Lab at The New School, Eric Sanderson of The Wildlife Conservation Society, and Greg Yetman of CIESIN at Columbia University. ***We will be depisiting this dataset to a more permanent repository, after which we will be updating this page with an appropriate citation. Please stay tuned.***
+This dataset was developed by The Nature Conservancy's New York City Program (Mike Treglia and Emily Maxwell) with contributions (data aggregation and additional support) from Timon McPhearson of The Urban Systems Lab at The New School, Eric Sanderson of The Wildlife Conservation Society, and Greg Yetman of CIESIN at Columbia University. ***We will be depositing this dataset to a more permanent repository, after which we will be updating this page with an appropriate citation. Please stay tuned.***
 
 ## Usage Notes
 
@@ -21,6 +21,7 @@ Mike Treglia, Urban Spatial Planner, The Nature Conservancy. michael.treglia[at]
 * *GreenRoofData2016_20180917.geojson* is in the human-readable, GeoJSON format, in in geographic coordinates (Lat/Long, WGS84; [EPSG 4263](http://spatialreference.org/ref/epsg/wgs-84/))
 * *GreenRoofData2016_20180917.gpkg* is in the GeoPackage format, which is an Open Standard readable by most GIS software including Esri products (tested on ArcMap 10.3.1 and multiple versions of QGIS). This dataset is in the New York State Plan Coordinate System (units in feet) for the Long Island Zone, North American Datum 1983, [EPSG 2263](http://www.spatialreference.org/ref/epsg/nad83-new-york-long-island-ftus/).
 * *GreenRoofData2016_20180917_Shapefile* is a folder containing a Shapefile and associated files. Please note that some field names were truncated due to limitations of Shapefiles, but columns are in the same order as for other files asnd in the same order as listed below. This dataset is in the New York State Plan Coordinate System (units in feet) for the Long Island Zone, North American Datum 1983, [EPSG 2263](http://www.spatialreference.org/ref/epsg/nad83-new-york-long-island-ftus/).
+* *GreenRoofData2016_20180917_Shapefile.zip* is a zipped folder with contents of the previously listed folder.
 
 
 ## The fields in the data are described below.
