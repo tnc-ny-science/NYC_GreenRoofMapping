@@ -20,7 +20,7 @@ Mike Treglia, Urban Spatial Planner, The Nature Conservancy. michael.treglia[at]
 
 * *GreenRoofData2016_20180917.geojson* is in the human-readable, GeoJSON format, in geographic coordinates (Lat/Long, WGS84; [EPSG 4263](http://spatialreference.org/ref/epsg/wgs-84/)).
 * *GreenRoofData2016_20180917.gpkg* is in the GeoPackage format, which is an Open Standard readable by most GIS software including Esri products (tested on ArcMap 10.3.1 and multiple versions of QGIS). This dataset is in the New York State Plan Coordinate System (units in feet) for the Long Island Zone, North American Datum 1983, [EPSG 2263](http://www.spatialreference.org/ref/epsg/nad83-new-york-long-island-ftus/).
-* *GreenRoofData2016_20180917_Shapefile* is a folder containing a Shapefile and associated files. Please note that some field names were truncated due to limitations of Shapefiles, but columns are in the same order as for other files asnd in the same order as listed below. This dataset is in the New York State Plan Coordinate System (units in feet) for the Long Island Zone, North American Datum 1983, [EPSG 2263](http://www.spatialreference.org/ref/epsg/nad83-new-york-long-island-ftus/).
+* *GreenRoofData2016_20180917_Shapefile* is a folder containing a Shapefile and associated files. Please note that some field names were truncated due to limitations of Shapefiles, but columns are in the same order as for other files and in the same order as listed below. This dataset is in the New York State Plan Coordinate System (units in feet) for the Long Island Zone, North American Datum 1983, [EPSG 2263](http://www.spatialreference.org/ref/epsg/nad83-new-york-long-island-ftus/).
 * *GreenRoofData2016_20180917_Shapefile.zip* is a zipped folder with contents of the previously listed folder.
 * *GreenRoofData2016_20180917.csv* is a comma-separated values file (CSV) with coordinates for centroids for the green roofs stored in the table itself. This allows for easily opening the data in a tool like spreadsheet software (e.g., Microsoft Excel) or a text editor.
 
@@ -55,7 +55,7 @@ Some, but not all fields were joined to the green roof footprint data based on b
 * *bbl_fixed* - Flag to indicate whether *bbl* was manually fixed. Since tax lot data may have changed slightly since the release of the building footprint data used in this work, a small percentage of bbl codes had to be manually updated based on overlay between the green roof footprint and the MapPLUTO data, when no join was feasible based on the bbl code from the building footprint data. (1 for yes, 0 for no)
 
 
-For *GreenRoofData2016_20180917.csv* there are two additional columns, representing the coordinates of centroids in geographic coordinates (Lat/Long, WGS84; [EPSG 4263](http://spatialreference.org/ref/epsg/wgs-84/):
+For *GreenRoofData2016_20180917.csv* there are two additional columns, representing the coordinates of centroids in geographic coordinates (Lat/Long, WGS84; [EPSG 4263](http://spatialreference.org/ref/epsg/wgs-84/)):
 
 * *xcoord* - Longitude in decimal degrees.
 * *ycoord* - Latitude in decimal degrees.
