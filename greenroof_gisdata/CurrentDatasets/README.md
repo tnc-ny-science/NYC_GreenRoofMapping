@@ -18,10 +18,12 @@ Mike Treglia, Urban Spatial Planner, The Nature Conservancy. michael.treglia[at]
 
 ## The files are as follows:
 
-* *GreenRoofData2016_20180917.geojson* is in the human-readable, GeoJSON format, in in geographic coordinates (Lat/Long, WGS84; [EPSG 4263](http://spatialreference.org/ref/epsg/wgs-84/))
+* *GreenRoofData2016_20180917.geojson* is in the human-readable, GeoJSON format, in geographic coordinates (Lat/Long, WGS84; [EPSG 4263](http://spatialreference.org/ref/epsg/wgs-84/)).
 * *GreenRoofData2016_20180917.gpkg* is in the GeoPackage format, which is an Open Standard readable by most GIS software including Esri products (tested on ArcMap 10.3.1 and multiple versions of QGIS). This dataset is in the New York State Plan Coordinate System (units in feet) for the Long Island Zone, North American Datum 1983, [EPSG 2263](http://www.spatialreference.org/ref/epsg/nad83-new-york-long-island-ftus/).
 * *GreenRoofData2016_20180917_Shapefile* is a folder containing a Shapefile and associated files. Please note that some field names were truncated due to limitations of Shapefiles, but columns are in the same order as for other files asnd in the same order as listed below. This dataset is in the New York State Plan Coordinate System (units in feet) for the Long Island Zone, North American Datum 1983, [EPSG 2263](http://www.spatialreference.org/ref/epsg/nad83-new-york-long-island-ftus/).
 * *GreenRoofData2016_20180917_Shapefile.zip* is a zipped folder with contents of the previously listed folder.
+* *GreenRoofData2016_20180917.csv* is a comma-separated values file (CSV) with coordinates for centroids for the green roofs stored in the table itself. This allows for easily opening the data in a tool like spreadsheet software (e.g., Microsoft Excel) or a text editor.
+
 
 
 ## The fields in the data are described below.
@@ -30,7 +32,7 @@ Some, but not all fields were joined to the green roof footprint data based on b
 
 * *fid* - Unique identifier
 * *bin* - NYC Building ID Number based on overlap between green roof areas and a building footprint dataset for NYC from August, 2017. (Newer building footprint datasets do not have linkages to the tax lot identifier (bbl), thus this older dataset was used). The most current building footprint dataset should be available at: [https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh). Associated metadata for fields from that dataset are available at [https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_BuildingFootprints.md](https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_BuildingFootprints.md).
-* *bbl* - Boro Block and Lot number as a single string. This field is a tax lot identifier for NYC, which can be tied to the [Digital Tax Map](http://gis.nyc.gov/taxmap/map.htm) and (PLUTO/MapPLUTO)[https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page]. Metadata for fields pulled from PLUTO/MapPLUTO can be found in the [PLUTO Data Dictionary](https://www1.nyc.gov/assets/planning/download/pdf/data-maps/open-data/pluto_datadictionary.pdf?v=18v1). All joins to this bbl were based on MapPLUTO version 18v1.
+* *bbl* - Boro Block and Lot number as a single string. This field is a tax lot identifier for NYC, which can be tied to the [Digital Tax Map](http://gis.nyc.gov/taxmap/map.htm) and [PLUTO/MapPLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). Metadata for fields pulled from PLUTO/MapPLUTO can be found in the [PLUTO Data Dictionary](https://www1.nyc.gov/assets/planning/download/pdf/data-maps/open-data/pluto_datadictionary.pdf?v=18v1). All joins to this bbl were based on MapPLUTO version 18v1.
 * *gr_area* - Total area of the footprint of the green roof as per this data layer, in square feet, calculated using the projected coordinate system (EPSG 2263).
 * *bldg_area* - Total area of the footprint of the associated building, in square feet, calculated using the projected coordinate system (EPSG 2263).
 * *prop_gr* - Proportion of the building covered by green roof according to this layer (*gr_area*/*bldg_area*).
@@ -51,3 +53,10 @@ Some, but not all fields were joined to the green roof footprint data based on b
 * *zonedist1* - Zoning District 1 type pulled from MapPLUTO.
 * *spdist1* - Special District 1 pulled from MapPLUTO.
 * *bbl_fixed* - Flag to indicate whether *bbl* was manually fixed. Since tax lot data may have changed slightly since the release of the building footprint data used in this work, a small percentage of bbl codes had to be manually updated based on overlay between the green roof footprint and the MapPLUTO data, when no join was feasible based on the bbl code from the building footprint data. (1 for yes, 0 for no)
+
+
+For *GreenRoofData2016_20180917.csv* there are two additional columns, representing the coordinates of centroids in geographic coordinates (Lat/Long, WGS84; [EPSG 4263](http://spatialreference.org/ref/epsg/wgs-84/):
+
+* *xcoord* - Longitude in decimal degrees.
+* *ycoord* - Latitude in decimal degrees.
+
