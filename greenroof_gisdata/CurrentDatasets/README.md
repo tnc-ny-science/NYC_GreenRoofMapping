@@ -2,14 +2,16 @@
 
 The files in this folder are GIS data files representing green roof footprints in NYC, based on aggregated data from multiple sources, classification of aerial imagery, and manual correction/edits. Thus, these data represent what was present and detected in aerial imagery for NYC from 2016, described at [https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_AerialImagery.md](https://github.com/CityOfNewYork/nyc-geo-metadata/blob/master/Metadata/Metadata_AerialImagery.md). 
 
-This dataset was developed by The Nature Conservancy's New York City Program (Mike Treglia and Emily Maxwell) with contributions (data aggregation and additional support) from Timon McPhearson of The Urban Systems Lab at The New School, Eric Sanderson of The Wildlife Conservation Society, and Greg Yetman of CIESIN at Columbia University. ***We will be depositing this dataset to a more permanent repository, after which we will be updating this page with an appropriate citation. Please stay tuned.***
+This dataset was developed by The Nature Conservancy's New York City Program (Mike Treglia and Emily Maxwell) with contributions (data aggregation and additional support) from Timon McPhearson of The Urban Systems Lab at The New School, Eric Sanderson of The Wildlife Conservation Society, and Greg Yetman of CIESIN at Columbia University. If using this dataset, please reference it as follows:
+
+	Treglia, Michael L., McPhearson, Timon, Sanderson, Eric W., Yetman, Greg, & Maxwell, Emily Nobel. (2018). Green Roofs Footprints for New York City, Assembled from Available Data and Remote Sensing (Version 1.0.0) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1469674
+	
+The dataset is also available for download via the data repository, Zenodo, at [https://zenodo.org/record/1469674#.W89Fb_kpCUk](https://zenodo.org/record/1469674#.W89Fb_kpCUk)
+
 
 ## Usage Notes
 
-The Nature Conservancy and co-authors of this work derived this data set from publicly available data sources. A proper citation will be forthcoming. If interested in using these data in advance of then, please contact Mike Treglia (michael.treglia[at]tnc.org). 
-
-The Nature Conservancy and co-authors of this work shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of The Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of The Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.
-
+The Nature Conservancy and co-authors of this work shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of The Nature Conservancy and co-authors. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of The Nature Conservancy and co-authors. All parties receiving these data must be informed of these restrictions. Authors of this work shall be acknowledged as data contributors to any reports or other products derived from these data, per the citation given above.
 
 ## Contact information: 
 
@@ -59,4 +61,9 @@ For *GreenRoofData2016_20180917.csv* there are two additional columns, represent
 
 * *xcoord* - Longitude in decimal degrees.
 * *ycoord* - Latitude in decimal degrees.
+
+
+## Acknowledgements: 
+
+This work was primarily supported through funding from the J.M. Kaplan Fund, awarded to the New York City Program of The Nature Conservancy, with additional support from the New York Community Trust, through New York City Audubon and the Green Roof Researchers Alliance.
 
