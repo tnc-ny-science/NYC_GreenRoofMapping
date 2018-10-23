@@ -4,7 +4,7 @@ The files in this folder are GIS data files representing green roof footprints i
 
 This dataset was developed by The Nature Conservancy's New York City Program (Mike Treglia and Emily Maxwell) with contributions (data aggregation and additional support) from Timon McPhearson of The Urban Systems Lab at The New School, Eric Sanderson of The Wildlife Conservation Society, and Greg Yetman of CIESIN at Columbia University. If using this dataset, please reference it as follows:
 
-	Treglia, Michael L., McPhearson, Timon, Sanderson, Eric W., Yetman, Greg, & Maxwell, Emily Nobel. (2018). Green Roofs Footprints for New York City, Assembled from Available Data and Remote Sensing (Version 1.0.0) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1469674
+*Treglia, Michael L., McPhearson, Timon, Sanderson, Eric W., Yetman, Greg, & Maxwell, Emily Nobel. (2018). Green Roofs Footprints for New York City, Assembled from Available Data and Remote Sensing (Version 1.0.0) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1469674*
 	
 The dataset is also available for download via the data repository, Zenodo, at [https://zenodo.org/record/1469674#.W89Fb_kpCUk](https://zenodo.org/record/1469674#.W89Fb_kpCUk)
 
