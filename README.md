@@ -1,7 +1,7 @@
 # NYC_GreenRoofMapping
 This folder contains code and data associated with mapping green roofs in New York City, based on aggregating data from multiple sources, and classification of aerial imagery. The most current data are available in [this folder](greenroof_gisdata/CurrentDatasets), where you will also find associated metadata in the README.md file. This repository is also associated with a dataset publication on Zenodo avaialble at [https://zenodo.org/record/1469674](https://zenodo.org/record/1469674), and data should be referenced per the citation given below.
 
-[Click here](greenroof_gisdata/CurrentDatasetsGreenRoofData2016_20180917) to see a simple webmap of the data.
+[Click here](https://github.com/tnc-ny-science/NYC_GreenRoofMapping/blob/master/greenroof_gisdata/CurrentDatasets/GreenRoofData2016_20180917.geojson) to see a simple webmap of the data.
 
 Contributors to this work are Michael Treglia and Emily Maxwell with The Nature Conservancy, Timon McPhearson of The Urban Systems Lab at The New School, Eric Sanderson of the Wildlife Conservation Society, and Greg Yetman of CIESIN at Columbia University.
 
